@@ -471,6 +471,7 @@
 
             <div class="swiper mySwiper" aria-label="Projects carousel">
                 <div class="swiper-wrapper">
+
                     <div class="swiper-slide">
                         <figure class="img-container card">
                             <img src="Nuerodiversity_Poster2.png" alt="2nd Prize Poster - Neurodiversity"
@@ -479,6 +480,30 @@
                                 <div class="meta">
                                     <h3>2nd Prize Poster Competition</h3>
                                     <p>Awareness about Neurodiversity — celebrating creativity and inclusion.</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <figure class="img-container card">
+                            <img src="Hari_E_Combass.png" alt="2nd Prize Poster - E-COMBAS 2.0" loading="lazy">
+                            <figcaption class="overlay">
+                                <div class="meta">
+                                    <h3>2nd Prize E-COMBAS 2.0</h3>
+                                    <p>In - Silico Peptide Design for Sjögren's Syndrome</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <figure class="img-container card">
+                            <img src="Bioclues_Nikhith.jpeg" alt="Presentation - Bioclues" loading="lazy">
+                            <figcaption class="overlay">
+                                <div class="meta">
+                                    <h3>Presentation - Bioclues</h3>
+                                    <p>Topic - Undergoing Literature Review</p>
                                 </div>
                             </figcaption>
                         </figure>
@@ -495,9 +520,13 @@
                             </figcaption>
                         </figure>
                     </div>
-                </div>
 
-                <div class="swiper-pagination" aria-hidden="false"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            <div class="swiper-pagination" aria-hidden="false"></div>
             </div>
         </section>
         </br>
@@ -567,7 +596,7 @@
             <h2>Contact Us</h2>
             <p class="center">Have a collaboration, press request or question? Send a quick message.</p>
 
-            <form action="https://formspree.io/f/xvgwpqwr" method="POST" aria-label="Contact form">
+            <form action="https://formspree.io/f/xvgwpqwr" method="POST" aria-label="Contact form" autocomplete="on">
                 <label class="sr-only" for="name">Name:</label> </br></br>
                 <input id="name" name="name" type="text" placeholder="Your name" required>
 
@@ -604,7 +633,7 @@
                         grabCursor: true,
                         centeredSlides: true,
                         slidesPerView: "auto",
-                        coverflowEffect: { rotate: 28, depth: 140, slideShadows: false },
+                        coverflowEffect: { rotate: 28, depth: 140, slideShadows: true },
                         autoplay: { delay: 3500, disableOnInteraction: false },
                         pagination: { el: ".swiper-pagination", clickable: true },
                     });
