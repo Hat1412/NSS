@@ -185,14 +185,6 @@
             max-width: 900px
         }
 
-        /* Cards / small UI */
-        .card {
-            background: var(--card);
-            border-radius: var(--radius);
-            padding: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.02);
-            box-shadow: var(--shadow)
-        }
 
         .center {
             text-align: center
@@ -334,7 +326,8 @@
             margin: 0 auto;
             padding: 12px;
             border-radius: 12px;
-            background: rgba(255, 255, 255, 0.03)
+            border: 5px solid #ffffff;
+            background-color: #000;
         }
 
         input,
@@ -551,15 +544,18 @@
         <section id="members" class="container">
             <h2>Our Team</h2>
             <div class="members" role="list">
-                <div class="member card" role="listitem">
+                <div class="member" style="width: 45%;" role="listitem">
                     <img src="nikk.jpeg" alt="Shaik Nikhith Jaha — Founder" loading="lazy">
-                    <h3>Shaik Nikhith Jaha</h3>
-                    <p>Founder</p>
+                    <h3>Shaik Nikhith Jaha, Founder</h3>
+                    <p>Curiosity and care for our planet can become practical solutions that empower communities. Small
+                        ideas can spark big
+                        change. Let's connect to build a sustainable, inclusive future.</p>
                 </div>
-                <div class="member card" role="listitem">
+                <div class="member" style="width: 45%;" role="listitem">
                     <img src="me2.jpeg" alt="Hariharan — Co-Founder" loading="lazy">
-                    <h3>Hariharan</h3>
-                    <p>Co-Founder</p>
+                    <h3>Hariharan, Co-Founder</h3>
+                    <p>Every solution starts with a chat. Got something? Got nothing? Doesn’t matter reach out and let’s
+                        talk.</p>
                 </div>
             </div>
         </section>
@@ -572,13 +568,13 @@
             <p class="center">Have a collaboration, press request or question? Send a quick message.</p>
 
             <form action="https://formspree.io/f/xvgwpqwr" method="POST" aria-label="Contact form">
-                <label class="sr-only" for="name">Name</label>
+                <label class="sr-only" for="name">Name:</label> </br></br>
                 <input id="name" name="name" type="text" placeholder="Your name" required>
 
-                <label class="sr-only" for="email">Email</label>
+                <label class="sr-only" for="email">Email:</label> </br></br>
                 <input id="email" name="_replyto" type="email" placeholder="Your email" required>
 
-                <label class="sr-only" for="message">Message</label>
+                <label class="sr-only" for="message">Message:</label> </br></br>
                 <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
 
                 <button type="submit">Send Message</button>
