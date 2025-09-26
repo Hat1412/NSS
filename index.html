@@ -14,6 +14,7 @@
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <style>
         :root {
@@ -42,7 +43,7 @@
         body {
             height: 100%;
             margin: 0;
-            background: linear-gradient(180deg, #072017 0%, #061416 60%);
+            background: linear-gradient(180deg, #072017 0%, #061416 60%, #072017);
             color: var(--muted);
             font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
             line-height: 1.45
@@ -295,29 +296,72 @@
             display: block
         }
 
+        /* Members layout */
         .members {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
             justify-content: center;
-            flex-wrap: wrap
         }
 
+        /* Game-style member card */
         .member {
-            width: 220px;
-            padding: 14px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.03);
-            text-align: center
+            background: linear-gradient(145deg, #0d1d19, #122824);
+            /* border: 2px solid #00ffcc; */
+            border-radius: 18px;
+            padding: 18px;
+            width: 280px;
+            text-align: center;
+            color: #eafff0;
+            /* box-shadow: 0 6px 20px rgba(0, 255, 200, 0.25), inset 0 0 15px rgba(0, 255, 200, 0.1); */
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .member:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 25px rgba(0, 255, 200, 0.4), inset 0 0 25px rgba(0, 255, 200, 0.2);
         }
 
         .member img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
+            border: 3px solid #00ffcc;
             object-fit: cover;
-            border: 3px solid var(--accent1);
-            display: block;
-            margin: 0 auto 10px
+            margin-bottom: 12px;
+        }
+
+        /* Game-style social links */
+        .social-links {
+            margin-top: 14px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .social-links a {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #00ff99, #00c4ff);
+            border-radius: 12px;
+            color: #0b0f0d;
+            font-size: 1.3rem;
+            text-decoration: none;
+            box-shadow: 0 4px 0 #007a6f, 0 6px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 0 #00685f, 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .social-links a:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #004c44 inset;
         }
 
         /* Contact form */
@@ -424,7 +468,7 @@
         <div class="container top" role="navigation" aria-label="Main navigation">
             <div class="brand" aria-hidden="false">
                 <span class="logo" aria-hidden="true"></span>
-                <span>Nikhith Sustainability Solutions</span>
+                <span style="padding: 5%;">Nikhith Sustainability Solutions</span>
             </div>
 
             <nav class="primary" aria-label="Primary">
@@ -457,7 +501,7 @@
 
     <main id="main">
         <!-- HERO -->
-        <section id="home" class="container">
+        <section id="home" class="container" style="padding-top: 5%;">
             <h1>Research · Sustainability · Innovation</h1>
             <p class="lead">We build lightweight, practical solutions — from algae air purification to community-driven
                 environmental tools. Small ideas, measurable impact.</p>
@@ -569,34 +613,45 @@
         </br>
         <div style="height:2px;width:100%;margin:0 0 12px 0;"></div>
         </br>
-        <!-- MEMBERS -->
+        <!-- MEmbers -->
         <section id="members" class="container">
-            <h2>Our Team</h2>
+            <h2>Our Team</h2> </br>
             <div class="members" role="list">
-                <div class="member" style="width: 45%;" role="listitem">
+                <div class="member" role="listitem">
                     <img src="nikk.jpeg" alt="Shaik Nikhith Jaha — Founder" loading="lazy">
                     <h3>Shaik Nikhith Jaha, Founder</h3>
-                    <p>Curiosity and care for our planet can become practical solutions that empower communities. Small
-                        ideas can spark big
-                        change. Let's connect to build a sustainable, inclusive future.</p>
+                    <p>Small ideas can spark big change. Let's connect to build a sustainable, inclusive future.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-                <div class="member" style="width: 45%;" role="listitem">
+
+                <div class="member" role="listitem">
                     <img src="me2.jpeg" alt="Hariharan — Co-Founder" loading="lazy">
                     <h3>Hariharan, Co-Founder</h3>
-                    <p>Every solution starts with a chat. Got something? Got nothing? Doesn’t matter reach out and let’s
-                        talk.</p>
+                    <p>Every solution starts with a chat. Got something? Got nothing? Doesn’t matter — reach out and
+                        let’s talk.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/hariharan-vinod-005166283/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+
+                    </div>
                 </div>
             </div>
         </section>
         </br>
-        <div style="height:2px;width:100%;margin:0 0 12px 0;"></div>
+        </br>
         </br>
         <!-- CONTACT -->
-        <section id="contact" class="container">
-            <h2>Contact Us</h2>
-            <p class="center">Have a collaboration, press request or question? Send a quick message.</p>
 
-            <form action="https://formspree.io/f/xvgwpqwr" method="POST" aria-label="Contact form" autocomplete="on">
+        <form action="https://formspree.io/f/xvgwpqwr" method="POST" aria-label="Contact form" autocomplete="on"
+            style="padding: 3%;">
+            <section id="contact" class="container">
+                <h2>Contact Us</h2>
+                <p class="center">Have a collaboration, press request or question? Send a quick message.</p>
+
                 <label class="sr-only" for="name">Name:</label> </br></br>
                 <input id="name" name="name" type="text" placeholder="Your name" required>
 
@@ -606,8 +661,8 @@
                 <label class="sr-only" for="message">Message:</label> </br></br>
                 <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
 
-                <button type="submit">Send Message</button>
-            </form>
+                <button type="submit" style="margin: 3%;">Send Message</button>
+        </form>
         </section>
     </main>
 
